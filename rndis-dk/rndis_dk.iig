@@ -1,0 +1,21 @@
+//
+//  rndis_dk.iig
+//  rndis-dk
+//
+//  Created by Ubayd on 2/21/26.
+//
+
+#ifndef rndis_dk_h
+#define rndis_dk_h
+
+#include <Availability.h>
+#include <DriverKit/IOService.iig>
+
+class rndis_dk: public IOService
+{
+public:
+    virtual kern_return_t
+    Start(IOService * provider) override;
+};
+
+#endif /* rndis_dk_h */
