@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>T6V8QY9542.censiir.rndis-dk</string>
+	<key>com.apple.application-identifier</key>
+	<string>T6V8QY9542.censiir.rndis-dk</string>
+	<key>com.apple.developer.driverkit</key>
+	<true/>
+	<key>com.apple.developer.driverkit.family.networking</key>
+	<true/>
+	<key>com.apple.developer.driverkit.transport.usb</key>
+	<array>
+		<dict>
+			<key>idVendor</key>
+			<integer>1256</integer>
+			<key>idProduct</key>
+			<integer>26724</integer>
+		</dict>
+	</array>
+	<key>com.apple.developer.team-identifier</key>
+	<string>T6V8QY9542</string>
+	<key>com.apple.security.get-task-allow</key>
+	<true/>
+	<key>get-task-allow</key>
+	<true/>
+</dict>
+</plist>
