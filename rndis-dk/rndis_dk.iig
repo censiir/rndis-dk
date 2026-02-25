@@ -9,13 +9,49 @@
 #define rndis_dk_h
 
 #include <Availability.h>
-#include <DriverKit/IOService.iig>
+#include <DriverKit/IODataQueueDispatchSource.iig>
+#include <NetworkingDriverKit/IOUserNetworkEthernet.iig>
+#include <USBDriverKit/IOUSBHostPipe.iig>
 
-class rndis_dk: public IOService
+class rndis_dk: public IOUserNetworkEthernet
 {
 public:
+    virtual void
+    TxPacketAvailable(OSAction * action) TYPE(IODataQueueDispatchSource::DataAvailable);
+
+    virtual void
+    BulkInComplete(OSAction * action,
+                   IOReturn status,
+                   uint32_t actualByteCount,
+                   uint64_t completionTimestamp) TYPE(IOUSBHostPipe::CompleteAsyncIO);
+
     virtual kern_return_t
     Start(IOService * provider) override;
+
+    virtual kern_return_t
+    Stop(IOService * provider) override;
+
+    virtual kern_return_t
+    SetInterfaceEnable(bool enable) override;
+
+    virtual kern_return_t
+    SetPromiscuousModeEnable(bool enable) override;
+
+    virtual kern_return_t
+    SetMulticastAddresses(const IOUserNetworkMACAddress *addresses,
+                          uint32_t count) override;
+
+    virtual kern_return_t
+    SetAllMulticastModeEnable(bool enable) override;
+
+    virtual kern_return_t
+    SelectMediaType(IOUserNetworkMediaType mediaType) override;
+
+    virtual kern_return_t
+    SetMTU(uint32_t mtu) override;
+
+    virtual kern_return_t
+    GetMaxTransferUnit(uint32_t *mtu) override;
 };
 
 #endif /* rndis_dk_h */

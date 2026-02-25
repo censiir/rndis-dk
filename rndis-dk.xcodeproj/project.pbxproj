@@ -8,11 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		085E03652F4A96FE00F70855 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085E03642F4A96FE00F70855 /* DriverKit.framework */; };
+		085E03722F4A96FE00F70855 /* SystemExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085E03742F4A96FE00F70855 /* SystemExtensions.framework */; };
+		085E03A12F4AA4A100F70855 /* censiir.rndis-dk.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 085E03612F4A96FE00F70855 /* censiir.rndis-dk.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		085E03992F4AA46400F70855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 085E03582F4A96FE00F70855 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 085E03602F4A96FE00F70855;
+			remoteInfo = "rndis-dk";
+		};
+		085E039C2F4AA46C00F70855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 085E03582F4A96FE00F70855 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 085E03602F4A96FE00F70855;
+			remoteInfo = "rndis-dk";
+		};
+		085E03A22F4AA4A100F70855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 085E03582F4A96FE00F70855 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 085E03602F4A96FE00F70855;
+			remoteInfo = "rndis-dk";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		085E03A42F4AA4A100F70855 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				085E03A12F4AA4A100F70855 /* censiir.rndis-dk.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		085E03612F4A96FE00F70855 /* censiir.rndis-dk.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = "censiir.rndis-dk.dext"; sourceTree = BUILT_PRODUCTS_DIR; };
 		085E03642F4A96FE00F70855 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = Library/Frameworks/DriverKit.framework; sourceTree = DEVELOPER_DIR; };
+		085E03732F4A96FE00F70855 /* rndis-loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rndis-loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		085E03742F4A96FE00F70855 /* SystemExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemExtensions.framework; path = System/Library/Frameworks/SystemExtensions.framework; sourceTree = SDKROOT; };
+		085E03962F4AA3B200F70855 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		085E039E2F4AA46F00F70855 /* ACIPCBTLib.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = ACIPCBTLib.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/lib/ACIPCBTLib.tbd; sourceTree = DEVELOPER_DIR; };
+		085E039F2F4AA47200F70855 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/AdServices.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -23,6 +68,13 @@
 			);
 			target = 085E03602F4A96FE00F70855 /* rndis-dk */;
 		};
+		085E03752F4A96FE00F70855 /* Exceptions for "loader-app" folder in "rndis-loader" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 085E037B2F4A96FE00F70855 /* rndis-loader */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +84,14 @@
 				085E036C2F4A96FE00F70855 /* Exceptions for "rndis-dk" folder in "rndis-dk" target */,
 			);
 			path = "rndis-dk";
+			sourceTree = "<group>";
+		};
+		085E03762F4A96FE00F70855 /* loader-app */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				085E03752F4A96FE00F70855 /* Exceptions for "loader-app" folder in "rndis-loader" target */,
+			);
+			path = "loader-app";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,12 +105,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		085E03772F4A96FE00F70855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				085E03722F4A96FE00F70855 /* SystemExtensions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		085E03572F4A96FE00F70855 = {
 			isa = PBXGroup;
 			children = (
+				085E03762F4A96FE00F70855 /* loader-app */,
 				085E03662F4A96FE00F70855 /* rndis-dk */,
 				085E03632F4A96FE00F70855 /* Frameworks */,
 				085E03622F4A96FE00F70855 /* Products */,
@@ -60,6 +129,7 @@
 		085E03622F4A96FE00F70855 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				085E03732F4A96FE00F70855 /* rndis-loader.app */,
 				085E03612F4A96FE00F70855 /* censiir.rndis-dk.dext */,
 			);
 			name = Products;
@@ -68,7 +138,11 @@
 		085E03632F4A96FE00F70855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				085E039F2F4AA47200F70855 /* AdServices.framework */,
+				085E039E2F4AA46F00F70855 /* ACIPCBTLib.tbd */,
+				085E03962F4AA3B200F70855 /* Accelerate.framework */,
 				085E03642F4A96FE00F70855 /* DriverKit.framework */,
+				085E03742F4A96FE00F70855 /* SystemExtensions.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +183,32 @@
 			productReference = 085E03612F4A96FE00F70855 /* censiir.rndis-dk.dext */;
 			productType = "com.apple.product-type.driver-extension";
 		};
+		085E037B2F4A96FE00F70855 /* rndis-loader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 085E03802F4A96FE00F70855 /* Build configuration list for PBXNativeTarget "rndis-loader" */;
+			buildPhases = (
+				085E037A2F4A96FE00F70855 /* Sources */,
+				085E03772F4A96FE00F70855 /* Frameworks */,
+				085E03782F4A96FE00F70855 /* Resources */,
+				085E03A42F4AA4A100F70855 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				085E039A2F4AA46400F70855 /* PBXTargetDependency */,
+				085E039D2F4AA46C00F70855 /* PBXTargetDependency */,
+				085E03A32F4AA4A100F70855 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				085E03762F4A96FE00F70855 /* loader-app */,
+			);
+			name = "rndis-loader";
+			packageProductDependencies = (
+			);
+			productName = "rndis-loader";
+			productReference = 085E03732F4A96FE00F70855 /* rndis-loader.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -119,6 +219,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					085E03602F4A96FE00F70855 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					085E037B2F4A96FE00F70855 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -138,12 +241,20 @@
 			projectRoot = "";
 			targets = (
 				085E03602F4A96FE00F70855 /* rndis-dk */,
+				085E037B2F4A96FE00F70855 /* rndis-loader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		085E035F2F4A96FE00F70855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		085E03782F4A96FE00F70855 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -160,18 +271,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		085E037A2F4A96FE00F70855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		085E039A2F4AA46400F70855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 085E03602F4A96FE00F70855 /* rndis-dk */;
+			targetProxy = 085E03992F4AA46400F70855 /* PBXContainerItemProxy */;
+		};
+		085E039D2F4AA46C00F70855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 085E03602F4A96FE00F70855 /* rndis-dk */;
+			targetProxy = 085E039C2F4AA46C00F70855 /* PBXContainerItemProxy */;
+		};
+		085E03A32F4AA4A100F70855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 085E03602F4A96FE00F70855 /* rndis-dk */;
+			targetProxy = 085E03A22F4AA4A100F70855 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		085E036E2F4A96FE00F70855 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "rndis-dk/rndis-dk.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = T6V8QY9542;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "rndis-dk/Info.plist";
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					NetworkingDriverKit,
+					"-framework",
+					USBDriverKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "censiir.rndis-dk";
 				PRODUCT_NAME = "$(inherited)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -184,12 +328,20 @@
 		085E036F2F4A96FE00F70855 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "rndis-dk/rndis-dk.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = T6V8QY9542;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "rndis-dk/Info.plist";
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					NetworkingDriverKit,
+					"-framework",
+					USBDriverKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "censiir.rndis-dk";
 				PRODUCT_NAME = "$(inherited)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -316,6 +468,61 @@
 			};
 			name = Release;
 		};
+		085E037E2F4A96FE00F70855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "loader-app/loader-app.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T6V8QY9542;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "loader-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "censiir.rndis-loader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		085E037F2F4A96FE00F70855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "loader-app/loader-app.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T6V8QY9542;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "loader-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "censiir.rndis-loader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +540,15 @@
 			buildConfigurations = (
 				085E036E2F4A96FE00F70855 /* Debug */,
 				085E036F2F4A96FE00F70855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		085E03802F4A96FE00F70855 /* Build configuration list for PBXNativeTarget "rndis-loader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				085E037E2F4A96FE00F70855 /* Debug */,
+				085E037F2F4A96FE00F70855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
