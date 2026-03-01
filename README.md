@@ -1,5 +1,7 @@
 # rndis-dk (HoRNDIS-style DriverKit USB RNDIS)
 
+## ATTENTION! This project is for personal use and will only be fixed as needed by the maintainer. There is no guarantee of bug fixes or updates. You are on your own.
+
 This project implements a DriverKit USB RNDIS driver extension (`censiir.rndis-dk.dext`) with a HoRNDIS-compatible control-plane initialization flow:
 
 - CDC encapsulated control transport
